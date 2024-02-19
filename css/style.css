@@ -8,16 +8,14 @@
 }
 
 .selected{
-    background-color: #56dc34;
+    background-color: #4ada26;
     color: white;
 }
 .confirmation {
     display: none;
-    background-color: #f3f4f6;
     padding: 16px;
     margin-top: 16px;
-    border-radius: 8px;
-    border: 1px solid #e5e7eb;
+
 }
 
 #border-dashed{
