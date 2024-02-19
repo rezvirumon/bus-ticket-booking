@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Ticket Counter</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="py-10">
+
+    <div class="container mx-auto flex items-start justify-around border-2 border-green-700 p-10 rounded-3xl">
+        <div class="rounded-3xl p-32">
+            <div>
+                <p>Available Seats: <span id="availableSeats">8</span></p>
+            </div>
+            <div>
+                <h1 class="font-semibold text-xl my-6">Select Your Seat</h1>
+                <div class="flex justify-between border-sky-500 py-5" id="border-dashed">
+                    <div class="flex gap-4 border-y-8">
+                        <img src="images/seat-gray.png" alt="">
+                        <p class="text-gray-500">Available</p>
+                    </div>
+                    <div class="flex gap-4">
+                        <img src="images/seat-green.png" alt="">
+                        <p class="text-green-500">Selected</p>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="flex justify-end my-5">
+                <button class=" text-2xl bg-gray-200 p-4 rounded-xl" data-seat="A1"><img src="images/str.png"
+                        alt=""></button>
+
+            </div>
+            <div class=" grid grid-cols-6 gap-4" id="busSeats ">
+                <span class="text-2xl px-10 py-5">A</span>
+                <button class="seat text-2xl bg-gray-200 px-10 py-5 rounded-xl" data-seat="A1">A1</button>
+                <button class="seat text-2xl bg-gray-200 px-10 rounded-xl" data-seat="A2">A2</button>
+                <span> </span>
+                <button class="seat text-2xl bg-gray-200 px-10 py-5 rounded-xl" data-seat="A3">A3</button>
+                <button class="seat text-2xl bg-gray-200 px-10 py-5 rounded-xl" data-seat="A4">A4</button>
+                <span class="text-2xl px-10 py-5">B</span>
+                <button class="seat text-2xl bg-gray-200 px-10 py-5 rounded-xl" data-seat="B1">B1</button>
+                <button class="seat text-2xl bg-gray-200 px-10 py-5 rounded-xl" data-seat="B2">B2</button>
+                <span> </span>
+                <button class="seat text-2xl bg-gray-200 px-10 py-5 rounded-xl" data-seat="B3">B3</button>
+                <button class="seat text-2xl bg-gray-200 px-10 py-5 rounded-xl" data-seat="B4">B4</button>
+            </div>
+        </div>
+
+        <div class=" bg-white p-8 rounded w-3/12">
+            <h1 class="font-semibold text-xl mb-5">Select Your Seat</h1>
+
+            <div class="flex justify-around p-2 bg-gray-100" id="border-dashed">
+                    <p>Seats <span id="selectedSeats" class="bg-green-500 rounded-xl px-2 text-white">0</span></p>
+                    <p>Class</p>
+                    <p>Price</p>
+            </div>
+            <div class="flex justify-around p-2">
+                    <p id="selectedSeatList"></p>
+            </div>
+
+            <div class="mt-4">
+
+                <p class="text-xl font-semibold"id="border-dashed">Total Price: <span id="totalPrice">0</span> Tk</p>
+                <input type="text" placeholder="Enter discount coupon" id="coupon" class=" border rounded p-2">
+                <button class="mt-2 bg-green-500 text-white p-2 rounded hover:bg-green-600"
+                    onclick="applyCoupon()">Apply</button>
+                <p id="couponError" class="text-red-500 text-sm mt-2"></p>
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <p class="font-semibold text-lg ">Passenger Name*</p>
+                <input class="border-2 w-full p-2 rounded-xl" type="text" placeholder="Name">
+                <p class="font-semibold text-lg ">Phone Number*</p>
+                <input class="border-2 w-full p-2 rounded-xl" type="number" placeholder="Number">
+                <p class="font-semibold text-lg ">Email Address</p>
+                <input class="border-2 w-full p-2 rounded-xl" type="email" placeholder="Email">
+                <button class="border-2 w-full p-2 rounded-xl bg-green-600">Next</button>
+                <div class="flex gap-4 text-sm justify-center text-gray-500 underline">
+                    <a href="">Terms and Conditions</a>
+                    <a href="">Cancellation Policy</a>
+                </div>
+            </div>
+
+            <!-- Seats Status -->
+            <div class="mt-6">
+                <p class="text-xl font-semibold" id="border-dashed">Grand Total: <span id="grandTotal">0</span> Tk</p>
+                <p id="maxSeatsError" class="text-red-500 text-sm mt-2"></p>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    
+  
+
+    
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
